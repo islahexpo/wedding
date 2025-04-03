@@ -7,7 +7,7 @@
 body {
   font-size: 1.2 rem;
   font-family: "Work Sans", sans-serif;
-  min-height: 4000px;
+  min-height: 1000px;
 }
 
 .hero::before {
@@ -48,14 +48,14 @@ body {
 }
 
 .hero a {
-  color: var(--pink);
-  background-color: white;
+  color: white;
+  background-color: var(--pink);
   box-shadow: var(--bg);
 }
 
 .hero a:hover {
-  background-color: var(--pink);
-  color: white;
+  background-color: white;
+  color: var(--pink);
 }
 
 .mynavbar {
@@ -121,6 +121,13 @@ body {
   font-weight: bold;
 }
 
+.home .row {
+  margin-top: 2rem;
+}
+
+.home .countainer {
+  margin-top: 20px;
+}
 .home .couple img {
   width: 100%;
 }
@@ -182,7 +189,6 @@ body {
 }
 
 .info .card-footer {
-  border-top: 1px solid #999;
   font-size: 0.9rem;
   font-weight: 300;
 }
