@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   background: rgba(15, 23, 42, 0.75);
-  border: 1px solid rgba(51, 65, 85, 0.6);
+  border: 1px solid rgba(232, 155, 235, 0.6);
   border-radius: 1rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.05);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -39,7 +39,7 @@
 .simply-countdown-dark > .simply-section .simply-amount {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: #fcdef8;
   line-height: 1.2;
   letter-spacing: -0.025em;
 }
