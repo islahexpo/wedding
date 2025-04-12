@@ -22,9 +22,10 @@
   align-items: center;
   justify-content: center;
   background: rgba(15, 23, 42, 0.75);
-  border:2px solid rgba(240, 143, 243, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.6);
   border-radius: 50%;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2),
+    0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.05);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
 }
