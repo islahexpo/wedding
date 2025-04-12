@@ -17,6 +17,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <!-- Animasi -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- simplyCountdown -->
     <link rel="stylesheet" href="countdown/dark.css" />
@@ -34,11 +36,11 @@
       class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
     >
       <main>
-        <h4>Kepada <span>Bapak/Ibu/Saudari/i, <span></span></h4>
-        <h1>Yogi & Erika</h1>
-        <p>Akan melangsungkan resepsi pernikahan dalam:</p>
-        <div class="simply-countdown-dark"></div>
-        <a href="#home" class="btn btn-lg mt-4" onclick="enableScroll()"> Lihat Undangan</a>
+        <h4 data-aos="fade-up" data-aos-duration="1000">Kepada <span data-aos="fade-up" data-aos-duration="1000">Bapak/Ibu/Saudari/i, <span></span></h4>
+        <h1 data-aos="fade-down">Yogi & Erika</h1>
+        <p class="animasi"></p>
+        <div class="simply-countdown-dark" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="2500"></div>
+        <a href="#home" class="btn btn-lg mt-4" onclick="enableScroll()" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="3000"> Lihat Undangan</a>
       </main>
     </section>
     <nav
@@ -89,9 +91,9 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">
-            <h2>Acara Pernikahan</h2>
-            <h3>Diselenggarakan pada 27 April 2025.</h3>
-            <p>
+            <h2 data-aos="fade-up" data-aos-duration="1000">Acara Pernikahan</h2>
+            <h3 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">Diselenggarakan pada 27 April 2025.</h3>
+            <p data-aos="fade-down" data-aos-duration="1000" data-aos-delay="150">
               Oleh karena itu, dengan segala hormat, kami bermaksud untuk
               mengundang Bapak/Ibu, Saudara/i, untuk hadir pada acara pernikahan
               kami.
@@ -102,14 +104,13 @@
         <div class="row couple">
           <div class="col-lg-6">
             <div class="row">
-              <div class="col-8 text-end">
+              <div class="col-8 text-end" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                 <h3>Degi Suprayogi</h3>
                 <p>
                 </p>
                 <p>
                   Putra dari Bpk. Wakidin <br />
-                  dan <br />
-                  Ibu Misnah
+                  & Ibu Misnah
                 </p>
               </div>
               <div class="col-4">
@@ -131,14 +132,13 @@
                   class="img-responsive rounded-circle"
                 />
               </div>
-              <div class="col-8">
+              <div class="col-8" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300">
                 <h3>Erika Ayunda Putri</h3>
                 <p>
                 </p>
                 <p>
                   Putri dari Bpk. Sapi'i <br />
-                  dan <br />
-                  Ibu Jamidah
+                  & Ibu Jamidah
                 </p>
               </div>
             </div>
@@ -211,6 +211,7 @@
                 </div>
               </div>
               <div class="card-footer">
+                Diharapkan untuk tetap kondusif.
               </div>
             </div>
           </div>
@@ -389,7 +390,6 @@
       <div class="col-md-8 col-10 text-center">
         <span>ungkapan tanda kasih</span>
         <h2>Kirim Hadiah</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi natus voluptates ex eius reprehenderit numquam?</p>
       </div>
     </div>
     <div class="row justify-content-center text-center">
@@ -401,7 +401,7 @@
           </li>
           <li class="list-group-item">
             <div class="fw-bold">NTB SYARIAH</div>
-            5040231012600 - DEGI SUPRAYOGI
+            5040204989315 - RIKA AYUNDA PUTRI
           </li>
           <li class="list-group-item">
             <div class="fw-bold">QRIS</div>
@@ -481,13 +481,27 @@
       const offcanvas = document.querySelector(".offcanvas");
 
       offcanvas.addEventListener("show.bs.offcanvas", function () {
-        stickyTop.style.overflow = "visible";
+        stickyTop.style.overflow = "hidden";
       });
 
       offcanvas.addEventListener("hidden.bs.offcanvas", function () {
         stickyTop.style.overflow = "hidden";
       });
     </script>
+
+    <!-- animasi -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
+
+<script>
+  gsap.registerPlugin(TextPlugin);
+  gsap.to('.animasi', {duration: 2.5 , delay:1 , text:'Akan melangsungkan resepsi pernikahan dalam:'});
+</script>
 
 <script>
    const rootElement = document.querySelector(":root");
@@ -515,7 +529,7 @@
   }
 
   function playAudio(){
-    song.volume = 0.1;
+    song.volume = 0.2;
     audioIconWrapper.style.display = 'flex'; 
     song.play();
     isPlaying = true;

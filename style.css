@@ -106,7 +106,7 @@ body {
 }
 
 .home p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #666;
 }
 
@@ -388,8 +388,8 @@ footer li {
   line-height: 0;
 }
 
-@keyframes rotating{
-  from{
+@keyframes rotating {
+  from {
     transform: rotate(0);
   }
   to {
